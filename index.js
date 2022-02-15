@@ -36,7 +36,7 @@ exports.handler = async (event, context, callback) => {
   if(!error){
     try {
       let info = await transporter.sendMail({
-        from: "sistema.fila.aws@gmail.com", 
+        from: process.env.USER_SMTP, 
         to: email.emailTo,
         subject: email.subject, 
         text: "", 

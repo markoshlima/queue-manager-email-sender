@@ -15,7 +15,7 @@ Resources:
         e faz o envio
       MemorySize: 128
       Timeout: 5
-      Role: 'arn:aws:iam::297738258633:role/LambdaFunctionsRole'
+      Role: ''
       Events:
         SQS1:
           Type: SQS
@@ -27,9 +27,9 @@ Resources:
             BatchSize: 10
       Environment:
         Variables:
-          HOST_SMTP: smtp.gmail.com
-          PASS_SMTP: 
-          USER_SMTP: sistema.fila.aws@gmail.com
+          HOST_SMTP: smtp (ex.:smtp.gmail.com)
+          PASS_SMTP: password
+          USER_SMTP: email
   SQSQueue1:
     Type: 'AWS::SQS::Queue'
     Properties: {}
